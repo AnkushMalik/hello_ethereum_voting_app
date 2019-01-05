@@ -1,4 +1,4 @@
-pragma solidity ^0.5.2;
+pragma solidity ^0.4.25;
 // specify what version of compiler this code will compile with
 
 contract Voting{
@@ -38,7 +38,7 @@ contract Voting{
 
     // checks whether the candidate exists in candidateList array
     function validCandidate(bytes32 candidate) public view returns (bool) {
-        for(int i = 0; i < candidateList.length; i++){
+        for(uint8 i = 0; i < candidateList.length; i++){
             if (candidateList[i] == candidate) return true;
         }
         return false;   
